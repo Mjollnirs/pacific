@@ -1,0 +1,18 @@
+/*
+Theme Name: Pacific
+Theme URI: https://rickbeckman.com/
+Author: Rick Beckman
+Author URI: https://rickbeckman.com/
+Description: A crisp WordPress theme built using Bootstrap styling, Font Awesome icons, and all the power of WordPress. This is an eternal WIP: Here there be dragons.
+Version: 2.0.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: pacific
+Tags: black, blue, gray, white, light, two-columns, left-sidebar, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.sticky {}
+.bypostauthor {}

@@ -1,10 +1,10 @@
-# Pacific
-
-[![Build Status](https://travis-ci.org/BrazenlyGeek/pacific.svg?branch=master)](https://travis-ci.org/BrazenlyGeek/pacific) [![devDependency Status](https://david-dm.org/BrazenlyGeek/pacific/dev-status.svg)](https://david-dm.org/BrazenlyGeek/pacific#info=devDependencies) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/BrazenlyGeek/pacific)
-
-* Author:		Rick Beckman
-* Author URL:	https://rickbeckman.com/
-* License:		[GNU General Public License v3.0](http://www.gnu.org/licenses/gpl-3.0.html)
+=== Pacific ===
+Author: Rick Beckman
+Author URL: https://rickbeckman.com/
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: black, blue, gray, white, light, two-columns, left-sidebar, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Tested up to: 4.4.2
 
 ## Description
 
