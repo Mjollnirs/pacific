@@ -78,20 +78,31 @@ module.exports = function(grunt) {
 				separator: ';',
 			},
 			dist: {
-				src: [jsFileList],
+				src: [
+					jsFileList
+				],
 				dest: 'pacific/assets/js/<%= pkg.name %>.js',
 			},
 		},
 		uglify: {
 			dist: {
 				files: {
-					'pacific/assets/js/<%= pkg.name %>.min.js': [jsFileList]
+					'pacific/assets/js/<%= pkg.name %>.min.js': [
+						jsFileList
+					]
 				}
 			}
 		},
 		autoprefixer: {
 			options: {
-				browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android > 4', '> 5%', '> 1% in US']
+				browsers: [
+					'last 2 versions',
+					'ie 8',
+					'ie 9',
+					'android > 4',
+					'> 5%',
+					'> 1% in US'
+				]
 			},
 			dev: {
 				options: {
@@ -145,7 +156,9 @@ module.exports = function(grunt) {
 						flattin: true,
 						isFile: true,
 						cwd: 'dev/vendor/fontawesome/fonts/',
-						src: ['*'],
+						src: [
+							'*'
+						],
 						dest: 'pacific/assets/fonts/'
 					}
 				]
