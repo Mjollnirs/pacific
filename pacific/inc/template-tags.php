@@ -264,3 +264,14 @@ if ( ! function_exists( 'pacific_output_404_content' ) ) :
 		get_search_form();
 	}
 endif;
+
+if ( ! function_exists( 'pacific_credit_wordpress' ) ) :
+	/**
+	 * Display a link to WordPress
+	 *
+	 * @since 2.0.0
+	 */
+	function pacific_credit_wordpress() {
+		echo '<a rel="nofollow" href="' . esc_url( __( 'https://wordpress.org/', 'pacific' ) ) . '">' . sprintf( __( 'Proudly powered by %s', 'pacific' ), 'WordPress' ) . '</a>';
+	}
+endif;

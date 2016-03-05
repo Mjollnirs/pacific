@@ -74,6 +74,7 @@ if ( ! function_exists( 'pacific_setup' ) ) :
 		add_action( 'widgets_init', 'pacific_widgets_init' ); # Registers Pacific's sidebar
 		add_action( 'wp_enqueue_scripts', 'pacific_scripts_styles' ); # Enqueue's Pacific's scripts & styles
 		add_action( 'admin_enqueue_scripts', 'pacific_admin_styles', 10 ); # Enqueue Paciic's admin styles
+		add_action( 'pacific_footer', 'pacific_credit_wordpress' ); # Add WordPress credit link
 	}
 endif;
 add_action( 'after_setup_theme', 'pacific_setup' );

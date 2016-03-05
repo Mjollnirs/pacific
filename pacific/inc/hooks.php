@@ -462,22 +462,13 @@ function pacific_hook_footer_after() {
 /**
  * Top of page footer
  *
- * HTML context: top of footer.site-info
+ * HTML context: full content of footer.site-info
  * THA hook: tha_footer_top
- */
-function pacific_hook_footer_top() {
-	do_action( 'pacific_footer_top' );
-	do_action( 'pacific_credits' ); # Backwards compatibility
-	do_action( 'tha_footer_top' );
-}
-
-/**
- * Bottom of page footer
- *
- * HTML context: bottom of footer.site-info
  * THA hook: tha_footer_bottom
  */
-function pacific_hook_footer_bottom() {
-	do_action( 'pacific_footer_bottom' );
+function pacific_hook_footer_top() {
+	do_action( 'tha_footer_top' );
+	do_action( 'pacific_footer' );
+	do_action( 'pacific_credits' ); # Backwards compatibility
 	do_action( 'tha_footer_bottom' );
 }
