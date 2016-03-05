@@ -466,7 +466,7 @@ function pacific_hook_footer_after() {
  * THA hook: tha_footer_top
  * THA hook: tha_footer_bottom
  */
-function pacific_hook_footer_top() {
+function pacific_hook_footer() {
 	do_action( 'tha_footer_top' );
 	do_action( 'pacific_footer' );
 	do_action( 'pacific_credits' ); # Backwards compatibility
