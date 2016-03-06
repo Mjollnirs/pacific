@@ -288,9 +288,11 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 	 * @param array  $args    An array of arguments.
 	 */
 	function pacific_output_comment( $comment, $depth, $args ) {
+		global $walker;
+
 		$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
 ?>
-		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
+		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $walker->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer class="comment-meta">
 					<div class="comment-author vcard">
