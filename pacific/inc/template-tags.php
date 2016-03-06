@@ -318,7 +318,7 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 					<?php comment_text(); ?>
 				</div>
 				<?php
-				comment_reply_link( array_merge( $args, array(
+				comment_reply_link( array_merge( (array) $args, array(
 					'add_below' => 'div-comment',
 					'depth'     => $depth,
 					'max_depth' => $args['max_depth'],
