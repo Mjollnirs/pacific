@@ -603,7 +603,7 @@ function pacific_customizer_links() {
 	wp_enqueue_script( 'pacific_customizer_script', get_template_directory_uri() . '/assets/js/pacific_customizer.js', array( "jquery" ), '2.0.0', true  );
 	wp_localize_script( 'pacific_customizer_script', 'pacificCustomizerObject', array(
 		'GitHub' => __( 'Pacific on GitHub', 'pacific' ),
-		'OpenHook' => __( 'Enhanced Customization with OpenHook', 'pacific' ),
+		'OpenHook' => __( 'Customizable with OpenHook', 'pacific' ),
 	) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'pacific_customizer_links' );

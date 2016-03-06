@@ -32,9 +32,10 @@ if ( post_password_required() || ! comments_open() ) {
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( apply_filters( 'pacific_list_comments_parameters', array(
-					'style'       => 'ol',
-					'short_ping'  => true,
-					'avatar_size' => 80,
+					'style'			=> 'ol',
+					'short_ping'	=> true,
+					'avatar_size'	=> 80,
+					'callback'		=> 'pacific_output_comment',
 				) ) );
 			?>
 		</ol>
