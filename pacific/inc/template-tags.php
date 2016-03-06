@@ -284,10 +284,10 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 	 * @since 2.0.0
 	 *
 	 * @param object $comment Comment to display.
-	 * @param int    $depth   Depth of comment.
 	 * @param array  $args    An array of arguments.
+	 * @param int    $depth   Depth of comment.
 	 */
-	function pacific_output_comment( $comment, $depth, $args ) {
+	function pacific_output_comment( $comment, $args, $depth ) {
 		global $walker;
 
 		$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
