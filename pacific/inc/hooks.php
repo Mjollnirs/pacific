@@ -407,6 +407,17 @@ function pacific_hook_comment_author( $comment, $args, $depth ) {
 }
 
 /**
+ * Comment metadata block
+ *
+ * HTML context:
+ *
+ * @since 2.0.0
+ */
+function pacific_hook_comment_metadata( $comment, $args, $depth ) {
+	do_action( 'pacific_comment_metadata', $comment, $args, $depth );
+}
+
+/**
  * After sidebar
  *
  * HTML context: within `div.sidebar-offcanvas`, just after `div#main-sidebar`

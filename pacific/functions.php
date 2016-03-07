@@ -75,6 +75,7 @@ if ( ! function_exists( 'pacific_setup' ) ) :
 		add_action( 'wp_enqueue_scripts', 'pacific_scripts_styles' ); # Enqueue's Pacific's scripts & styles
 		add_action( 'admin_enqueue_scripts', 'pacific_admin_styles', 10 ); # Enqueue Pacific's admin styles
 		add_action( 'pacific_comment_author', 'pacific_output_comment_author', 10, 3 ); # Default comment author/gravatar display
+		add_action( 'pacific_comment_metadata', 'pacific_output_comment_metadata', 10, 3 ); # Default comment metadata
 		add_action( 'pacific_footer', 'pacific_credit_wordpress' ); # Add WordPress credit link
 	}
 endif;

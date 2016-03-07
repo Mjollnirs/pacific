@@ -279,11 +279,34 @@ endif;
 if ( ! function_exists( 'pacific_output_comment_author' ) ) :
 	/**
 	 * Output the comment author
+	 *
+	 * @since 2.0.0
 	 */
 	function pacific_output_comment_author( $comment, $args, $depth ) {
 		if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] );
 
 		printf( __( '%s <span class="says">says:</span>' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) ) );
+	}
+endif;
+
+if ( ! function_exists( 'paciic_output_comment_metadata' ) ) :
+	/**
+	 * Output the comment metadata
+	 *
+	 * @since 2.0.0
+	 */
+	function pacific_output_comment_metadata( $comment, $args, $depth ) {
+	?>
+						<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
+							<time datetime="<?php comment_time( 'c' ); ?>">
+								<?php
+									/* translators: 1: comment date, 2: comment time */
+									printf( __( '%1$s at %2$s', 'pacific' ), get_comment_date( '', $comment ), get_comment_time() );
+								?>
+							</time>
+						</a>
+						<?php edit_comment_link( __( 'Edit', 'pacific' ), '<span class="edit-link">', '</span>' ); ?>
+	<?php
 	}
 endif;
 
@@ -310,15 +333,7 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 						<?php pacific_hook_comment_author( $comment, $args, $depth ); ?>
 					</div>
 					<div class="comment-metadata">
-						<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
-							<time datetime="<?php comment_time( 'c' ); ?>">
-								<?php
-									/* translators: 1: comment date, 2: comment time */
-									printf( __( '%1$s at %2$s', 'pacific' ), get_comment_date( '', $comment ), get_comment_time() );
-								?>
-							</time>
-						</a>
-						<?php edit_comment_link( __( 'Edit', 'pacific' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php pacific_hook_comment_metadata( $comment, $args, $depth ); ?>
 					</div>
 					<?php if ( '0' == $comment->comment_approved ) : ?>
 					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'pacific' ); ?></p>

@@ -113,6 +113,7 @@ Pacific is able to be customized extensively by the [WordPress hooks and filters
 * `pacific_comments_top`
 * `pacific_comments_bottom`
 * `pacific_comment_author`
+* `pacific_comment_metadata`
 * `pacific_sidebar_before`
 * `pacific_sidebar_after`
 * `pacific_sidebar_top`
