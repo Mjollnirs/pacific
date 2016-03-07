@@ -396,6 +396,17 @@ function pacific_hook_sidebar_before() {
 }
 
 /**
+ * Comment author block
+ *
+ * HTML context: within `div.comment-author.vcard`
+ *
+ * @since 2.0.0
+ */
+function pacific_hook_comment_author( $comment, $args, $depth ) {
+	do_action( 'pacific_comment_author', $comment, $args, $depth );
+}
+
+/**
  * After sidebar
  *
  * HTML context: within `div.sidebar-offcanvas`, just after `div#main-sidebar`

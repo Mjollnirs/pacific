@@ -276,6 +276,17 @@ if ( ! function_exists( 'pacific_credit_wordpress' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'pacific_output_comment_author' ) ) :
+	/**
+	 * Output the comment author
+	 */
+	function pacific_output_comment_author() {
+		if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] );
+
+		printf( __( '%s <span class="says">says:</span>' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) ) );
+	}
+endif;
+
 if ( ! function_exists( 'pacific_output_comment' ) ) :
 	/**
 	 * Output a comment.
@@ -296,8 +307,7 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer class="comment-meta">
 					<div class="comment-author vcard">
-						<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-						<?php printf( __( '%s <span class="says">says:</span>' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) ) ); ?>
+						<?php pacific_hook_comment_author( $comment, $args, $depth ); ?>
 					</div>
 					<div class="comment-metadata">
 						<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
