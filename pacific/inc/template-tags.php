@@ -280,7 +280,7 @@ if ( ! function_exists( 'pacific_output_comment_author' ) ) :
 	/**
 	 * Output the comment author
 	 */
-	function pacific_output_comment_author() {
+	function pacific_output_comment_author( $comment, $args, $depth ) {
 		if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] );
 
 		printf( __( '%s <span class="says">says:</span>' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) ) );
