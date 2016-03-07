@@ -329,14 +329,18 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $walker->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer class="comment-meta">
+					<?php if ( has_action( 'pacific_comment_author' ) ) : ?>
 					<div class="comment-author vcard">
 						<?php pacific_hook_comment_author( $comment, $args, $depth ); ?>
 					</div>
+					<?php endif; ?>
+					<?php if ( has_action( 'pacific_comment_metadata' ) ) : ?>
 					<div class="comment-metadata">
 						<?php pacific_hook_comment_metadata( $comment, $args, $depth ); ?>
 					</div>
+					<?php endif; ?>
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'pacific' ); ?></p>
+					<p class="comment-awaiting-moderation"><?php echo apply_filters( 'pacific_moderation_notice', __( 'Your comment is awaiting moderation.', 'pacific' ) ); ?></p>
 					<?php endif; ?>
 				</footer>
 				<div class="comment-content">

@@ -127,7 +127,8 @@ Pacific is able to be customized extensively by the [WordPress hooks and filters
 
 ### Available filters
 
-* `pacific_404_title` — (string) The title of the 404 Error page.
+* `pacific_404_title` — (string) The title of the 404 error page
 * `pacific_comment_form_parameters` — (array) Parameters passed to `comment_form()` for customizing the comment form
 * `pacific_list_comments_parameters` — (array) Parameters passed to `wp_list_comments()` for customizing comments display
-* `show_pacific_footer` — (boolean) Whether to show the `footer` block or not
+* `pacific_moderation_notice` – (string) Message given to users when their comment is held for moderation
+* `pacific_show_footer` — (boolean) Whether to show the `footer` block or not

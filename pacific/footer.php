@@ -12,7 +12,7 @@ if ( 1 == count( get_included_files() ) ) {
 }
 ?>
 				<?php pacific_hook_footer_before(); ?>
-			<?php if ( apply_filters( 'show_pacific_footer', true ) ) : ?>
+			<?php if ( apply_filters( 'pacific_show_footer', true ) ) : ?>
 				<footer role="contentinfo" class="site-info" itemscope itemtype="http://schema.org/WPFooter">
 					<?php pacific_hook_footer(); ?>
 				</footer>
