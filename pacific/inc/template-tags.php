@@ -285,7 +285,7 @@ if ( ! function_exists( 'pacific_output_comment_author' ) ) :
 	function pacific_output_comment_author( $comment, $args, $depth ) {
 		if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] );
 
-		printf( __( '%s <span class="says">says:</span>' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) ) );
+		printf( __( '<b class="fn">%s</b>', get_comment_author_link( $comment ) ) );
 	}
 endif;
 
@@ -325,8 +325,13 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 		global $walker;
 
 		$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
+		$gravatars_enabled = get_option( 'show_avatars' );
+		$extra_classes = '';
+
+		empty( $args['has_children'] ) ? $extra_classes[] = 'parent' : false;
+		get_option( 'show_avatars' ) ? $extra_classes[] = 'gravatars' : false;
 ?>
-		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $walker->has_children ? 'parent' : '', $comment ); ?>>
+		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $extra_classes, $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<footer class="comment-meta">
 					<?php if ( has_action( 'pacific_comment_author' ) ) : ?>

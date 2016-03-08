@@ -409,7 +409,7 @@ function pacific_hook_comment_author( $comment, $args, $depth ) {
 /**
  * Comment metadata block
  *
- * HTML context:
+ * HTML context: div.comment-metadata
  *
  * @since 2.0.0
  */
