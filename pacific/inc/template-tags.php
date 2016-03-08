@@ -329,7 +329,7 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 		$extra_classes = '';
 
 		empty( $args['has_children'] ) ? $extra_classes[] = 'parent' : false;
-		get_option( 'show_avatars' ) ? $extra_classes[] = 'gravatars' : false;
+		get_option( 'show_avatars' ) ? false : $extra_classes[] = 'no-avatar';
 ?>
 		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $extra_classes, $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
