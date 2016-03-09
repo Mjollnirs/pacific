@@ -385,14 +385,21 @@ function pacific_hook_comments_bottom() {
 }
 
 /**
- * Before sidebar
+ * Before text of comment
  *
- * HTML context: within `div.sidebar-offcanvas`, just before `div#main-sidebar`
- * THA hook: tha_sidebars_before
+ * HTML context: within `div.comment-content`
  */
-function pacific_hook_sidebar_before() {
-	do_action( 'pacific_sidebar_before' );
-	do_action( 'tha_sidebars_before' ); # Pluralization is intentional
+function pacific_hook_comment_before() {
+	do_action( 'pacific_comment_before' );
+}
+
+/**
+ * After text of comment
+ *
+ * HTML context: within `div.comment-content`
+ */
+function pacific_hook_comment_after() {
+	do_action( 'pacific_comment_after' );
 }
 
 /**
@@ -415,6 +422,17 @@ function pacific_hook_comment_author( $comment, $args, $depth ) {
  */
 function pacific_hook_comment_metadata( $comment, $args, $depth ) {
 	do_action( 'pacific_comment_metadata', $comment, $args, $depth );
+}
+
+/**
+ * Before sidebar
+ *
+ * HTML context: within `div.sidebar-offcanvas`, just before `div#main-sidebar`
+ * THA hook: tha_sidebars_before
+ */
+function pacific_hook_sidebar_before() {
+	do_action( 'pacific_sidebar_before' );
+	do_action( 'tha_sidebars_before' ); # Pluralization is intentional
 }
 
 /**

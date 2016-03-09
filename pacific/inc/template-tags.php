@@ -349,7 +349,9 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 					<?php endif; ?>
 				</footer>
 				<div class="comment-content">
+					<?php pacific_hook_comment_before(); ?>
 					<?php comment_text(); ?>
+					<?php pacific_hook_comment_after(); ?>
 				</div>
 				<?php
 				comment_reply_link( array_merge( (array) $args, array(
