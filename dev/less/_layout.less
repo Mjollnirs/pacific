@@ -595,10 +595,42 @@
 		list-style: none;
 	}
 
-	.children {
+	.children { /* 1st-level child comments */
 		margin: 0 0 0 40px !important;
 		padding: 0;
 		list-style: none;
+
+		.children { /* 2nd-level child comments */
+			margin-left: 36px !important;
+
+			.children { /* 3rd-level child comments */
+				margin-left: 32px !important;
+
+				.children { /* 4th-level child comments */
+					margin-left: 28px !important;
+
+					.children { /* 5th-level child comments */
+						margin-left: 24px !important;
+
+						.children { /* 6th-level child comments */
+							margin-let: 20px !important;
+
+							.children { /* 7th-level child comments */
+								margin-left: 16px !important;
+
+								.children { /* 8th-level child comments */
+									margin-left: 12px !important;
+
+									.children { /* 9th-level child comments */
+										margin-left: 8px !important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.comment {
