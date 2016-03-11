@@ -283,13 +283,13 @@ if ( ! function_exists( 'pacific_output_comment_author' ) ) :
 	 * @since 2.0.0
 	 */
 	function pacific_output_comment_author( $comment, $args, $depth ) {
-		if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] );
+		if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'], null, sprintf( __( 'avatar of %s', 'pacific' ), esc_attr( get_comment_author() ) ), array( 'extra_attr' => 'itemprop="image" ' ) );
 
 		printf( __( '<b class="fn" itemprop="name">%s</b>', 'pacific' ), get_comment_author_link( $comment ) );
 	}
 endif;
 
-if ( ! function_exists( 'paciic_output_comment_metadata' ) ) :
+if ( ! function_exists( 'pacific_output_comment_metadata' ) ) :
 	/**
 	 * Output the comment metadata
 	 *
