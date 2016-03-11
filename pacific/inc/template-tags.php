@@ -285,7 +285,7 @@ if ( ! function_exists( 'pacific_output_comment_author' ) ) :
 	function pacific_output_comment_author( $comment, $args, $depth ) {
 		if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] );
 
-		printf( __( '<b class="fn">%s</b>', 'pacific' ), get_comment_author_link( $comment ) );
+		printf( __( '<b class="fn" itemprop="name">%s</b>', 'pacific' ), get_comment_author_link( $comment ) );
 	}
 endif;
 
@@ -297,8 +297,8 @@ if ( ! function_exists( 'paciic_output_comment_metadata' ) ) :
 	 */
 	function pacific_output_comment_metadata( $comment, $args, $depth ) {
 	?>
-						<a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
-							<time datetime="<?php comment_time( 'c' ); ?>">
+						<a itemprop="url" href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>">
+							<time itemprop="dateCreated" datetime="<?php comment_time( 'c' ); ?>">
 								<?php
 									/* translators: 1: comment date, 2: comment time */
 									printf( __( '%1$s at %2$s', 'pacific' ), get_comment_date( '', $comment ), get_comment_time() );
@@ -332,10 +332,10 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 		get_option( 'show_avatars' ) ? false : $extra_classes[] = 'no-avatar';
 ?>
 		<<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $extra_classes, $comment ); ?>>
-			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body" itemscope itemtype="https://schema.org/Comment">
 				<footer class="comment-meta">
 					<?php if ( has_action( 'pacific_comment_author' ) ) : ?>
-					<div class="comment-author vcard">
+					<div class="comment-author vcard" itemprop="author" itemscope itemtype="https://schema.org/Person">
 						<?php pacific_hook_comment_author( $comment, $args, $depth ); ?>
 					</div>
 					<?php endif; ?>
@@ -348,7 +348,7 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 					<p class="comment-awaiting-moderation"><?php echo apply_filters( 'pacific_moderation_notice', __( 'Your comment is awaiting moderation.', 'pacific' ) ); ?></p>
 					<?php endif; ?>
 				</footer>
-				<div class="comment-content">
+				<div class="comment-content" itemprop="text">
 					<?php pacific_hook_comment_before(); ?>
 					<?php comment_text(); ?>
 					<?php pacific_hook_comment_after(); ?>
