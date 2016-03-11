@@ -67,6 +67,7 @@ if ( ! function_exists( 'pacific_setup' ) ) :
 		add_filter( 'style_loader_tag', 'pacific_filter_styles', 10, 2 ); # Filters style tags as needed
 		add_filter( 'the_content_more_link', 'modify_read_more_link' ); # Enhances appearance of "Read more..." link
 		add_filter( 'use_default_gallery_style', '__return_false' ); # Disable default WordPress gallery styling
+		add_filter( 'get_comment_author_link', function( $link ) { return str_replace( 'class', 'itemprop=\'url\' class', $link ); }); # Add microdata to author link
 
 		# Add actions
 		add_action( 'pacific_html_before', 'pacific_doctype' ); # Outputs HTML doctype
