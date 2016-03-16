@@ -160,6 +160,16 @@ module.exports = function(grunt) {
 							'*'
 						],
 						dest: 'pacific/assets/fonts/'
+					},
+					{
+						expand: true,
+						flattin: true,
+						isFile: true,
+						cwd: 'dev/vendor/html5shiv/dist/',
+						src: [
+							'*'
+						],
+						dest: 'pacific/assets/js/'
 					}
 				]
 			}
@@ -174,7 +184,8 @@ module.exports = function(grunt) {
 		'jshint',
 		'less:build',
 		'autoprefixer:build',
-		'uglify'
+		'uglify',
+		'copy'
 	]);
 	grunt.registerTask('build', [
 		'jshint',
