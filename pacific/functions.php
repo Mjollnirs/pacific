@@ -130,7 +130,10 @@ if ( ! function_exists( 'pacific_scripts_styles' ) ) :
 		wp_enqueue_style( 'pacific-fonts', pacific_fonts_url(), array(), null ); # Web fonts
 		wp_enqueue_style( 'pacific-theme', get_template_directory_uri() . $assets['css'], array(), $version ); # Pacific's styling
 		wp_enqueue_script( 'pacific-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, false ); # Pacific's scripting
-		wp_enqueue_style( 'pacific-style', get_stylesheet_uri() ); # Load main stylesheet, for child theme supports
+
+		if ( is_child_theme() ) {
+			wp_enqueue_style( 'pacific-style', get_stylesheet_uri() ); # Load main stylesheet, for child theme support
+		}
 
 		# If the `script_loader_tag` filter is unavailable, this script will be added via the `wp_head` hook
 		if ( version_compare( '4.1', $wp_version, '<=' ) ) {
