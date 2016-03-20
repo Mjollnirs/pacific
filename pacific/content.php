@@ -15,8 +15,8 @@ if ( 1 == count( get_included_files() ) ) {
 ?>
 <article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h2 class="entry-title" itemprop="name">
-			<a itemprop="url" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'pacific' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+		<h2 class="entry-title">
+			<a itemprop="url" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'pacific' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title( '<span itemprop="name">', '</span>' ); ?></a><?php if ( function_exists( 'the_subtitle' ) ) : the_subtitle( ' <small itemprop="alternativeHeadline">', '</small>' ); endif; ?>
 		</h2>
 		<?php $archive_metadata = pacific_get_theme_option( 'archive_metadata', 1 ); ?>
 		<?php if ( 1 != $archive_metadata ) : ?>

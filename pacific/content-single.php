@@ -19,7 +19,7 @@ $author_postbox = ( get_the_author_meta( 'description' ) && 1 != pacific_get_the
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>
+		<h1 class="entry-title"><?php the_title( '<span itemprop="name">', '</span>' ); if ( function_exists( 'the_subtitle' ) ) : the_subtitle( ' <small itemprop="alternativeHeadline">', '</small>' ); endif; ?></h1>
 		<?php $single_metadata = pacific_get_theme_option( 'single_metadata', 1 ); ?>
 		<?php if ( 1 != $single_metadata ) : ?>
 			<div class="entry-meta"><?php pacific_entry_meta( true, $author_postbox ); ?></div>

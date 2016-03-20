@@ -27,6 +27,11 @@ A crisp WordPress theme built using Bootstrap styling, Font Awesome icons, and a
 * Microdata and microformats - Enhancements for richer posts
 * Translation ready
 
+### Plugin support
+* Subtitles — Styled output with Schema.org markup
+  * WP Subtitle <https://wordpress.org/plugins/wp-subtitle/>
+  * Subtitles <https://wordpress.org/plugins/subtitles/>
+
 ## Resources
 
 * Pacific is a port of [Flat](https://github.com/Codeinwp/flat) ([GPL v3.0](http://www.gnu.org/licenses/gpl-3.0.html)), originally by [Yoarts](http://www.yoarts.com/free-flat-design-wordpress-theme/)

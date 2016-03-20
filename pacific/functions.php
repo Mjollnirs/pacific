@@ -78,6 +78,12 @@ if ( ! function_exists( 'pacific_setup' ) ) :
 		add_action( 'pacific_comment_author', 'pacific_output_comment_author', 10, 3 ); # Default comment author/gravatar display
 		add_action( 'pacific_comment_metadata', 'pacific_output_comment_metadata', 10, 3 ); # Default comment metadata
 		add_action( 'pacific_footer', 'pacific_credit_wordpress' ); # Add WordPress credit link
+
+		# @pluginSupport Removes default styling and output from Subtitles (@link https://wordpress.org/plugins/subtitles/)
+		if ( class_exists( 'Subtitles' ) &&  method_exists( 'Subtitles', 'subtitle_styling' ) ) {
+			remove_action( 'wp_head', array( Subtitles::getInstance(), 'subtitle_styling' ) );
+			remove_filter( 'the_title', array( Subtitles::getInstance(), 'the_subtitle' ), 10, 2 );
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'pacific_setup' );
@@ -118,26 +124,25 @@ if ( ! function_exists( 'pacific_scripts_styles' ) ) :
 		if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
 			$assets = array(
 				'css' => '/assets/css/pacific.css',
-				'js'  => '/assets/js/pacific.js',
+				'js' => '/assets/js/pacific.js',
+				'shiv' => '/assets/js/html5shiv.js',
 			);
 		} else {
 			$assets = array(
 				'css' => '/assets/css/pacific.min.css',
-				'js'  => '/assets/js/pacific.min.js',
+				'js' => '/assets/js/pacific.min.js',
+				'shiv' => '/assets/js/html5shiv.min.js',
 			);
 		}
 
 		wp_enqueue_style( 'pacific-fonts', pacific_fonts_url(), array(), null ); # Web fonts
 		wp_enqueue_style( 'pacific-theme', get_template_directory_uri() . $assets['css'], array(), $version ); # Pacific's styling
-		wp_enqueue_script( 'pacific-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, false ); # Pacific's scripting
-
-		if ( is_child_theme() ) {
-			wp_enqueue_style( 'pacific-style', get_stylesheet_uri() ); # Load main stylesheet, for child theme support
-		}
+		wp_enqueue_script( 'pacific-js', get_template_directory_uri() . $assets['js'], array( 'jquery' ), $version, true ); # Pacific's scripting
+		wp_enqueue_style( 'pacific-style', get_stylesheet_uri() ); # Load main stylesheet, for child theme supports
 
 		# If the `script_loader_tag` filter is unavailable, this script will be added via the `wp_head` hook
 		if ( version_compare( '4.1', $wp_version, '<=' ) ) {
-			wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.2', false );
+			wp_enqueue_script( 'html5shiv', get_template_directory_uri() . $assets['shiv'], array(), '3.7.3', false );
 		}
 	}
 endif;
