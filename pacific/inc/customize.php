@@ -560,7 +560,7 @@ function pacific_fonts_url() {
 	if ( $fonts ) {
 		$fonts_url = add_query_arg( array(
 			'family' => esc_attr( implode( '%7C', $fonts ) )
-		), '#fonts.googleapis.com/css' );
+		), '//fonts.googleapis.com/css' );
 	}
 
 	return $fonts_url;
@@ -598,12 +598,3 @@ function pacific_logo() {
 		echo '<h2 itemprop="description" class="site-description">' . esc_attr( $tagline ) . '</h2>';
 	}
 }
-
-function pacific_customizer_links() {
-	wp_enqueue_script( 'pacific_customizer_script', get_template_directory_uri() . '/assets/js/pacific_customizer.js', array( "jquery" ), '2.0.0', true  );
-	wp_localize_script( 'pacific_customizer_script', 'pacificCustomizerObject', array(
-		'GitHub' => __( 'Pacific on GitHub', 'pacific' ),
-		'OpenHook' => __( 'Customizable with OpenHook', 'pacific' ),
-	) );
-}
-add_action( 'customize_controls_enqueue_scripts', 'pacific_customizer_links' );
