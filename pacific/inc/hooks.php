@@ -509,6 +509,5 @@ function pacific_hook_footer_after() {
 function pacific_hook_footer() {
 	do_action( 'tha_footer_top' );
 	do_action( 'pacific_footer' );
-	do_action( 'pacific_credits' ); # Backwards compatibility
 	do_action( 'tha_footer_bottom' );
 }

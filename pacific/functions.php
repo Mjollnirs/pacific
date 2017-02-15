@@ -74,10 +74,9 @@ if ( ! function_exists( 'pacific_setup' ) ) :
 		add_action( 'pacific_404_content', 'pacific_output_404_content' ); # Outputs a helpful message on 404 pages
 		add_action( 'widgets_init', 'pacific_widgets_init' ); # Registers Pacific's sidebar
 		add_action( 'wp_enqueue_scripts', 'pacific_scripts_styles' ); # Enqueue's Pacific's scripts & styles
-		add_action( 'admin_enqueue_scripts', 'pacific_admin_styles', 10 ); # Enqueue Pacific's admin styles
 		add_action( 'pacific_comment_author', 'pacific_output_comment_author', 10, 3 ); # Default comment author/gravatar display
 		add_action( 'pacific_comment_metadata', 'pacific_output_comment_metadata', 10, 3 ); # Default comment metadata
-		add_action( 'pacific_footer', 'pacific_credit_wordpress' ); # Add WordPress credit link
+		add_action( 'pacific_footer', 'pacific_footer_wordpress' ); # Add Footer
 
 		# @pluginSupport Removes default styling and output from Subtitles (@link https://wordpress.org/plugins/subtitles/)
 		if ( class_exists( 'Subtitles' ) &&  method_exists( 'Subtitles', 'subtitle_styling' ) ) {
@@ -146,10 +145,6 @@ if ( ! function_exists( 'pacific_scripts_styles' ) ) :
 		}
 	}
 endif;
-
-function pacific_admin_styles() {
-	wp_enqueue_style( 'pacific_admin_stylesheet', get_template_directory_uri() . '/assets/css/admin-style.css', array(), '1.1', false );
-}
 
 # The following function uses a filter introduced in WP 4.1
 if ( version_compare( '4.1', $wp_version, '<=' ) ) :

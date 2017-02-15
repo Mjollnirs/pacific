@@ -1,0 +1,446 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pacific\n"
+"POT-Creation-Date: 2017-02-15 18:57+0800\n"
+"PO-Revision-Date: 2017-02-15 19:10+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.10\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:21 content-none.php:23
+msgid "Not Found"
+msgstr "未找到"
+
+#: archive.php:27 author-bio.php:21
+#, php-format
+msgid "About %s"
+msgstr "关于%s的更多信息"
+
+#: archive.php:41 index.php:24 search.php:28
+msgid "<i class=\"fa fa-chevron-left\"></i>"
+msgstr "<i class=\"fa fa-chevron-left\"></i>"
+
+#: archive.php:41 index.php:24 search.php:28
+msgid "<i class=\"fa fa-chevron-right\"></i>"
+msgstr "<i class=\"fa fa-chevron-right\"></i>"
+
+#: author-bio.php:28
+#, php-format
+msgid "View all posts by %1$s %2$s"
+msgstr "查看%1$s版本%2$s详情"
+
+#: comments.php:29
+msgid "<span itemprop=\"interactionCount\">0</span> comment"
+msgstr "<span itemprop=\"interactionCount\">0</span> 个评论"
+
+#: comments.php:29
+msgid "<span itemprop=\"interactionCount\">1</span> comment"
+msgstr "<span itemprop=\"interactionCount\">1</span> 个评论"
+
+#: comments.php:29
+msgid "<span itemprop=\"interactionCount\">%</span> comments"
+msgstr "<span itemprop=\"interactionCount\">%</span> 个评论"
+
+#: comments.php:45
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: comments.php:46
+msgid "&larr; Older Comments"
+msgstr "&larr; 早期评论"
+
+#: comments.php:47
+msgid "Newer Comments &rarr;"
+msgstr "较新评论 &rarr;"
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#: content-none.php:21
+msgid "Welcome to Your WordPress Site"
+msgstr "欢迎使用WordPress！"
+
+#: content-none.php:30
+msgid ""
+"Looks like there aren&apos;t any public posts to show. Ready to publish your "
+"first post?"
+msgstr "准备好发布第一篇文章了？。"
+
+#: content-none.php:31
+msgid "Get started here"
+msgstr "从这里开始"
+
+#: content-none.php:35
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
+
+#: content-none.php:41
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching will help."
+msgstr "我们可能无法找到您需要的内容。或许搜索功能可以帮到您。"
+
+#: content-single.php:37 page.php:30
+msgid "Continue reading<span class=\"meta-nav\">&hellip;</span>"
+msgstr "继续阅读 <span class=\"meta-nav\">&hellip;</span>"
+
+#: content-single.php:38 content.php:36 page.php:31
+msgid "Pages:"
+msgstr "页码："
+
+#: content-single.php:42
+msgid " "
+msgstr " "
+
+#: content.php:19 content.php:28
+#, php-format
+msgid "Permalink to %s"
+msgstr "固定链接：%s"
+
+#: content.php:35
+msgid "Continue reading"
+msgstr "继续阅读"
+
+#: functions.php:62
+msgid "Navigation Menu"
+msgstr "导航菜单"
+
+#: functions.php:97
+msgid "Main Widget Area"
+msgstr "主挂件区域"
+
+#: functions.php:99
+msgid "Appears in the sidebar section of the site"
+msgstr "在网站侧边栏区域出现。"
+
+#: functions.php:202
+#, php-format
+msgid "Continue reading %s"
+msgstr "继续阅读%s"
+
+#: header.php:42
+msgid "<i class=\"fa fa-gear\"></i>"
+msgstr "<i class=\"fa fa-gear\"></i>"
+
+#: header.php:43
+msgid "<i class=\"fa fa-bars\"></i>"
+msgstr "<i class=\"fa fa-gear\"></i>"
+
+#: inc/customize.php:49 inc/customize.php:92
+msgid "Site Logo"
+msgstr "站点图标"
+
+#: inc/customize.php:63
+msgid "Site Title Font Family"
+msgstr "站点标题字体"
+
+#: inc/customize.php:91
+msgid "Site Title"
+msgstr "站点标题"
+
+#: inc/customize.php:93
+msgid "Both Title and Logo"
+msgstr "显示站点标题与Logo"
+
+#: inc/customize.php:104
+msgid "Site Favicon"
+msgstr "站点图标"
+
+#: inc/customize.php:114
+msgid "Design"
+msgstr "设计"
+
+#: inc/customize.php:127 inc/customize.php:231
+msgid "Sidebar Background Color"
+msgstr "顶部和侧边栏背景颜色"
+
+#: inc/customize.php:142 inc/customize.php:244
+msgid "Background size"
+msgstr "背景尺寸"
+
+#: inc/customize.php:146 inc/customize.php:248
+msgid "Cover"
+msgstr "Cover"
+
+#: inc/customize.php:147 inc/customize.php:249
+msgid "Contain"
+msgstr "Contain"
+
+#: inc/customize.php:148 inc/customize.php:250
+msgid "Initial"
+msgstr "Initial"
+
+#: inc/customize.php:153 inc/customize.php:255
+msgid "Typography"
+msgstr "排版"
+
+#: inc/customize.php:166 inc/customize.php:267
+msgid "Global Font Family"
+msgstr "全局字体"
+
+#: inc/customize.php:187 inc/customize.php:288
+msgid "Heading Font Family"
+msgstr "标题字体"
+
+#: inc/customize.php:210 inc/customize.php:311
+msgid "Sub-Heading Font Family"
+msgstr "副标题字体"
+
+#: inc/customize.php:327
+msgid "Single Post"
+msgstr "文章页面"
+
+#: inc/customize.php:339 inc/customize.php:387
+msgid "Hide Featured Image"
+msgstr "隐藏特色图像"
+
+#: inc/customize.php:353 inc/customize.php:401
+msgid "Hide Metadata"
+msgstr "隐藏元数据"
+
+#: inc/customize.php:367
+msgid "Hide Author Box"
+msgstr "隐藏作者"
+
+#: inc/customize.php:375
+msgid "Blog Index &amp; Archive Pages"
+msgstr "首页与存档页"
+
+#: inc/customize.php:415
+msgid "Show Post Excerpt"
+msgstr "显示文章数目"
+
+#: inc/template-tags.php:36 inc/template-tags.php:42
+#, php-format
+msgid "%1$s by %2$s"
+msgstr "%2$s的%1$s"
+
+#: inc/template-tags.php:53
+msgid "0 Comments"
+msgstr "没有评论"
+
+#: inc/template-tags.php:53
+msgid "1 Comment"
+msgstr "一条评论"
+
+#: inc/template-tags.php:53
+msgid "% Comments"
+msgstr "%条评论"
+
+#: inc/template-tags.php:71
+#, php-format
+msgid "Category: %s"
+msgstr "分类：%s"
+
+#: inc/template-tags.php:73
+#, php-format
+msgid "Tag: %s"
+msgstr "标签：%s"
+
+#: inc/template-tags.php:75
+#, php-format
+msgid "Author: %s"
+msgstr "作者：%s"
+
+#: inc/template-tags.php:77
+#, php-format
+msgid "Year: %s"
+msgstr "年份：%s"
+
+#: inc/template-tags.php:77
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y年"
+
+#: inc/template-tags.php:79
+#, php-format
+msgid "Month: %s"
+msgstr "月份：%s"
+
+#: inc/template-tags.php:79
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Y年n月"
+
+#: inc/template-tags.php:81
+#, php-format
+msgid "Day: %s"
+msgstr "日期：%s"
+
+#: inc/template-tags.php:81
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "Y年n月j日"
+
+#: inc/template-tags.php:84
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "日志"
+
+#: inc/template-tags.php:86
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "相册"
+
+#: inc/template-tags.php:88
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "图像"
+
+#: inc/template-tags.php:90
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "视频"
+
+#: inc/template-tags.php:92
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "引语"
+
+#: inc/template-tags.php:94
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "链接"
+
+#: inc/template-tags.php:96
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "状态"
+
+#: inc/template-tags.php:98
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "音频"
+
+#: inc/template-tags.php:100
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "聊天"
+
+#: inc/template-tags.php:103
+#, php-format
+msgid "Archives: %s"
+msgstr "存档：%s"
+
+#: inc/template-tags.php:107
+#, php-format
+msgid "%1$s: %2$s"
+msgstr "%1$s：%2$s"
+
+#: inc/template-tags.php:109 sidebar.php:23
+msgid "Archives"
+msgstr "存档"
+
+#: inc/template-tags.php:168
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: inc/template-tags.php:220 single.php:28
+msgid "Previous"
+msgstr "上一页"
+
+#: inc/template-tags.php:221 single.php:25
+msgid "Next"
+msgstr "下一页"
+
+#: inc/template-tags.php:222
+msgid "Posts navigation"
+msgstr "文章导航"
+
+#: inc/template-tags.php:262
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "这儿似乎什么都没有，试试搜索？"
+
+#: inc/template-tags.php:275
+msgid "https://wordpress.org/"
+msgstr "https://cn.wordpress.org/"
+
+#: inc/template-tags.php:275
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "自豪地采用%s"
+
+#: inc/template-tags.php:286
+#, php-format
+msgid "avatar of %s"
+msgstr "用户头像 %s"
+
+#: inc/template-tags.php:288
+#, php-format
+msgid "<b class=\"fn\" itemprop=\"name\">%s</b>"
+msgstr "<b class=\"fn\" itemprop=\"name\">%s</b>"
+
+#: inc/template-tags.php:304
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: inc/template-tags.php:308
+msgid "Edit"
+msgstr "编辑"
+
+#: inc/template-tags.php:348
+msgid "Your comment is awaiting moderation."
+msgstr "您的评论正在等待审核。"
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s的搜索结果"
+
+#: searchform.php:17 searchform.php:18
+msgid "Search"
+msgstr "搜索"
+
+#: searchform.php:19
+msgctxt "submit button"
+msgid "Search"
+msgstr "搜索"
+
+#: sidebar.php:30
+msgid "Meta"
+msgstr "元字段。"
+
+#: single.php:26
+msgid "Next post:"
+msgstr "下篇文章："
+
+#: single.php:29
+msgid "Previous post:"
+msgstr "上篇文章："
+
+#. Theme Name of the plugin/theme
+msgid "Pacific"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://rickbeckman.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"A crisp WordPress theme built using Bootstrap styling, Font Awesome icons, "
+"and all the power of WordPress. This is an eternal WIP: Here there be "
+"dragons."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Rick Beckman"
+msgstr ""

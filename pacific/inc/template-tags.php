@@ -265,14 +265,15 @@ if ( ! function_exists( 'pacific_output_404_content' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'pacific_credit_wordpress' ) ) :
+if ( ! function_exists( 'pacific_footer_wordpress' ) ) :
 	/**
-	 * Display a link to WordPress
+	 * Display Footer
 	 *
 	 * @since 2.0.0
 	 */
-	function pacific_credit_wordpress() {
-		echo '<a rel="nofollow" href="' . esc_url( __( 'https://wordpress.org/', 'pacific' ) ) . '">' . sprintf( __( 'Proudly powered by %s', 'pacific' ), 'WordPress' ) . '</a>';
+	function pacific_footer_wordpress() {
+		echo '<div><span>Copyright &copy; 2016-' . date("Y") . ',&nbsp;<a href="https://www.mjollnir.cc">Mjollnir</a>. &nbsp;除非另有声明，本网站采用知识共享“<a rel="license" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">署名-非商业性使用-相同方式共享 3.0 中国大陆</a>”许可协议授权。</span><div>';
+        echo '<div><span>Host by&nbsp;<a href="http://www.vultr.com/?ref=6870672" target="_blank">Vultr.com</a></span></div>';
 	}
 endif;
 
