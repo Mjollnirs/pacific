@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pacific\n"
 "POT-Creation-Date: 2017-02-15 18:57+0800\n"
-"PO-Revision-Date: 2017-02-15 19:10+0800\n"
+"PO-Revision-Date: 2017-02-15 20:26+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -229,7 +229,7 @@ msgstr "显示文章数目"
 #: inc/template-tags.php:36 inc/template-tags.php:42
 #, php-format
 msgid "%1$s by %2$s"
-msgstr "%2$s的%1$s"
+msgstr "%1$s，由%2$s。"
 
 #: inc/template-tags.php:53
 msgid "0 Comments"
