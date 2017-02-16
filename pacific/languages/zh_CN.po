@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pacific\n"
 "POT-Creation-Date: 2017-02-15 18:57+0800\n"
-"PO-Revision-Date: 2017-02-15 20:26+0800\n"
+"PO-Revision-Date: 2017-02-15 20:31+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -44,15 +44,15 @@ msgstr "查看%1$s版本%2$s详情"
 
 #: comments.php:29
 msgid "<span itemprop=\"interactionCount\">0</span> comment"
-msgstr "<span itemprop=\"interactionCount\">0</span> 个评论"
+msgstr "<span itemprop=\"interactionCount\">0</span> 条评论"
 
 #: comments.php:29
 msgid "<span itemprop=\"interactionCount\">1</span> comment"
-msgstr "<span itemprop=\"interactionCount\">1</span> 个评论"
+msgstr "<span itemprop=\"interactionCount\">1</span> 条评论"
 
 #: comments.php:29
 msgid "<span itemprop=\"interactionCount\">%</span> comments"
-msgstr "<span itemprop=\"interactionCount\">%</span> 个评论"
+msgstr "<span itemprop=\"interactionCount\">%</span> 条评论"
 
 #: comments.php:45
 msgid "Comment navigation"
@@ -353,11 +353,11 @@ msgstr "文章导航"
 
 #: inc/template-tags.php:220 single.php:28
 msgid "Previous"
-msgstr "上一页"
+msgstr "上一个"
 
 #: inc/template-tags.php:221 single.php:25
 msgid "Next"
-msgstr "下一页"
+msgstr "下一个"
 
 #: inc/template-tags.php:222
 msgid "Posts navigation"
