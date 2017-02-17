@@ -52,6 +52,9 @@ module.exports = function(grunt) {
 				files: {
 					'pacific/assets/css/<%= pkg.name %>.css': [
 						'dev/less/<%= pkg.name %>.less'
+					],
+                    'pacific/assets/css/editor-style.css': [
+						'dev/less/editor-style.less'
 					]
 				},
 				options: {
@@ -66,6 +69,9 @@ module.exports = function(grunt) {
 				files: {
 					'pacific/assets/css/<%= pkg.name %>.min.css': [
 						'dev/less/<%= pkg.name %>.less'
+					],
+                    'pacific/assets/css/editor-style.min.css': [
+						'dev/less/editor-style.less'
 					]
 				},
 				options: {

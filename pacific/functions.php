@@ -56,7 +56,11 @@ if ( ! function_exists( 'pacific_setup' ) ) :
 		add_theme_support( 'tha-hooks', array( 'all' ) ); # @link https://github.com/zamoose/themehookalliance
 
 		# Add style to the post editor for a more WYSIWYG experience
-		add_editor_style( array( 'assets/css/editor-style.css' ) );
+        if ( defined( 'WP_ENV' ) && 'development' === WP_ENV ) {
+            add_editor_style( array( 'assets/css/editor-style.css' ) );
+        } else {
+            add_editor_style( array( 'assets/css/editor-style.min.css' ) );
+        }
 
 		# Pacific has one navigation menu; register it with WordPress
 		register_nav_menu( 'primary', __( 'Navigation Menu', 'pacific' ) );
