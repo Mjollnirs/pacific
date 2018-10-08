@@ -327,7 +327,7 @@ if ( ! function_exists( 'pacific_output_comment' ) ) :
 
 		$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
 		$gravatars_enabled = get_option( 'show_avatars' );
-		$extra_classes = '';
+		$extra_classes = [];
 
 		empty( $args['has_children'] ) ? $extra_classes[] = 'parent' : false;
 		get_option( 'show_avatars' ) ? false : $extra_classes[] = 'no-avatar';
